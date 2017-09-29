@@ -1,0 +1,13 @@
+// Vb.Net
+Private Function DBConnectionStatus() As Boolean
+    Try
+        Using sqlConn As New SqlConnection("YourConnectionString")
+                sqlConn.Open()
+                Return (sqlConn.State = ConnectionState.Open)
+        End Using
+    Catch e1 As SqlException
+        Return False
+    Catch e2 As Exception
+        Return False
+    End Try
+End Function
