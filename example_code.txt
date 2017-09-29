@@ -1,4 +1,4 @@
-// Vb.Net
+// Vb.Net - opens a connection to the database and returns a boolean depending on the database status
 Private Function DBConnectionStatus() As Boolean
     Try
         Using sqlConn As New SqlConnection("YourConnectionString")
